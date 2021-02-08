@@ -1,0 +1,26 @@
+
+.searchBox{
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+#item-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 60px;
+}
+
+.imageControl{
+    width: 100%;
+    overflow: hidden;
+}
+
+.textControl{
+    text-align: center;
+}
+
+.itemInfoClass{
+    border: 1px solid black;
+    border-radius: 15px;
+    overflow: hidden;
+}
