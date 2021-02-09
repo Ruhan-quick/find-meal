@@ -17,11 +17,14 @@ body{
 }
 
 #showDetails{
-    
+    display: none;
     
 }
+#appendInIt{
+    display: none;
+}
 .showDetails{
-    display: block;
+    
     width: 400px;
     background-color: white;
     overflow: hidden;

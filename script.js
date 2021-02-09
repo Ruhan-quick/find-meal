@@ -12,6 +12,7 @@ const showItems = (searchedItem) => {
     fetch(url)
         .then(res => res.json())
         .then(data => displayMeals(data))
+        
 }
 
 
@@ -54,35 +55,16 @@ const showItemDetails = (itemName) =>{
 }
 
 const showDetailCart = (content) =>{
-    const detailsDiv = document.getElementById('appendInIt');
-    const Ddiv = document.createElement('div');
-    Ddiv.className = "showDetails shadow"
-            Ddiv.innerHTML = `
-            <div>
-            <img class="dCartImageControl" src="${content.meals[0].strMealThumb}" alt="">
-            </div>
-            <div>
-            <h3 class="dCartTextControl p-2 container">${content.meals[0].strMeal}</h3>
-            </div>
-            <div class="container">
-            <h5>Ingredients:</h5>
-            <ul id="ingredientsList">
-            </ul>
-            </div>
-            `
-            detailsDiv.appendChild(Ddiv);
-            let item = content.meals[0];
-            let ingredients = [item.strIngredient1, item.strIngredient2, item.strIngredient3, item.strIngredient4, item.strIngredient5, item.strIngredient6]
-
-            for(let i=0;i<6;i++){
-                
-
-                const ul = document.getElementById('ingredientsList');
-                const li = document.createElement('li');
-                li.innerText = ingredients[i];
-                console.log(ingredients[i]);
-                ul.appendChild(li);
-            }
-           
+    document.getElementById('appendInIt').style.display = 'block';
+    const item = content.meals[0];
+    document.getElementById('detailThumb').src = `${item.strMealThumb}`
+    document.getElementById('detailTitle').innerText =`${item.strMeal}`
+    document.getElementById('li1').innerText = `${item.strIngredient1}`
+    document.getElementById('li2').innerText = `${item.strIngredient2}`
+    document.getElementById('li3').innerText = `${item.strIngredient3}`
+    document.getElementById('li4').innerText = `${item.strIngredient4}`
+    document.getElementById('li5').innerText = `${item.strIngredient5}`
+    document.getElementById('li6').innerText = `${item.strIngredient6}`
+    document.getElementById('li7').innerText = `${item.strIngredient7}`
 }
 
