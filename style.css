@@ -1,26 +1,59 @@
-
+body{
+    background-color: goldenrod;
+}
 .searchBox{
     margin-bottom: 50px;
     margin-top: 30px;
 }
 
+#inputItem{
+    width: 400px;
+}
+
 #item-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 60px;
+    grid-gap: 70px;
 }
 
+#showDetails{
+    
+    
+}
+.showDetails{
+    display: block;
+    width: 400px;
+    background-color: white;
+    overflow: hidden;
+    border: 0px solid black;
+    border-radius: 20px;
+    padding: 0px;
+    margin-bottom: 60px;
+}
 .imageControl{
     width: 100%;
     overflow: hidden;
 }
+/* #appendInIt{
+    overflow: hidden;
+} */
+.dCartImageControl{
+    width: 100%;
+    overflow: hidden;
+    height: 250px;
+}
 
 .textControl{
     text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.dCartTextControl{
+    
 }
 
 .itemInfoClass{
-    border: 1px solid black;
+    border: 0px solid black;
     border-radius: 15px;
     overflow: hidden;
 }
