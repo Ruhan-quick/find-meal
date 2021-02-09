@@ -12,9 +12,20 @@ const showItems = (searchedItem) => {
     fetch(url)
         .then(res => res.json())
         .then(data => displayMeals(data))
+        .catch(function(){
+            console.log('error oc')
+            const h1 = document.createElement('h1');
+            h1.innerText = 'Sorry! No item found as your searched one.';
+            document.getElementById('ses-somadhan').appendChild(h1);
+
+        })
         
 }
 
+const showErrorMessage = () =>{
+    document.getElementsByClassName('warningC').style.display = 'block';
+    console.log('didnt found');
+}
 
 
 const displayMeals = (items) => {
